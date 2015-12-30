@@ -1,0 +1,17 @@
+<h1>Kategorie</h1>
+<%= link_to "Home", root_path %></li>
+ <%= link_to 'Nowa kategoria', new_cathegory_path %>
+<table>
+  <tr>
+    <th>Cathegory</th>
+    <th colspan="2"></th>
+  </tr>
+   <% @cathegories.each do |cathegory| %>
+    <tr>
+      <td><%= cathegory.cat %></td>
+      <td><%= link_to 'Pokaż', cathegory_path(cathegory) %></td>
+      <td><%= link_to 'Edytuj', edit_cathegory_path(cathegory) %></td>
+      <td><%= link_to 'Usuń', cathegory_path(cathegory)%></td>
+    </tr>
+  <% end %>
+</table>
