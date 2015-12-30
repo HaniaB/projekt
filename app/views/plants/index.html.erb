@@ -1,0 +1,19 @@
+<h1>Rośliny</h1>
+<%= link_to 'Nowa', new_plant_path %>
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <th colspan="2"></th>
+  </tr>
+   <% @plants.each do |plant| %>
+    <tr>
+      <td><%= plant.name %></td>
+      <td><%= link_to 'Show', plant_path(plant) %></td>
+      <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
+      <td><%= link_to 'Destroy', plant_path(plant),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+  
+    </tr>
+  <% end %>
+</table>
