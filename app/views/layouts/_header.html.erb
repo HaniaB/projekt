@@ -1,14 +1,32 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "Encyklopedia Roślin", '#', id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
+
+ <header class="navbar navbar-default navbar-static-top">   
+      <nav>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+           
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Home",   root_path %></li>
+            <li><a href="#">Informacje</a></li>
+            <li><a href="#">Galeria</a></li>
+         
+         
         <li><%= link_to "Rośliny",   plants_path %></li>
         <li><%= link_to "Kategorie",   cathegories_path %></li>
         <li><%= link_to "Help",   '#' %></li>
         <li><%= link_to "Log in", '#' %></li>
       </ul>
     </nav>
+<%= link_to image_tag("meczennica_f3.jpg", id: "banner"), '#' %>
+  <div class="container">
+    
+    <%= link_to "Encyklopedia Roślin", '#', id: "logo" %>
   </div>
 </header>

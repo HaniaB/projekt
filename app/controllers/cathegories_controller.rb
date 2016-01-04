@@ -1,7 +1,7 @@
 class CathegoriesController < ApplicationController
    def index
     @cathegories = Cathegory.all
-    end
+   end
   
   def show
     @cathegory = Cathegory.find(params[:id])

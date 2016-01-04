@@ -9,6 +9,8 @@ class PlantsController < ApplicationController
     
     def new
         @plant = Plant.new
+        #plant.foto = params[:file]
+        
     end
     
     def edit
@@ -40,7 +42,7 @@ class PlantsController < ApplicationController
 
  private
   def plant_params
-    params.require(:plant).permit(:name, :latin, :family, :condition)
+    params.require(:plant).permit(:name, :latin, :family, :condition, :foto)
   end
 
 end

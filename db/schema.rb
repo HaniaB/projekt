@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151230175253) do
+ActiveRecord::Schema.define(version: 20160104160917) do
 
   create_table "cathegories", force: :cascade do |t|
     t.string   "cat"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20151230175253) do
     t.text     "condition"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "foto"
   end
 
 end

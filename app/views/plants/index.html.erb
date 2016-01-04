@@ -1,5 +1,5 @@
 <h1>Rośliny</h1>
-<%= link_to "Home", root_path %></li>
+
 <%= link_to 'Nowa', new_plant_path %>
 <table>
   <tr>
@@ -9,6 +9,7 @@
    <% @plants.each do |plant| %>
     <tr>
       <td><%= plant.name %></td>
+      <td colspan="2"></td>
       <td><%= link_to 'Show', plant_path(plant) %></td>
       <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
       <td><%= link_to 'Destroy', plant_path(plant),
