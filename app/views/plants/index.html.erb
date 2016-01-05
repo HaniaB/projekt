@@ -9,7 +9,6 @@
    <% @plants.each do |plant| %>
     <tr>
       <td><%= plant.name %></td>
-      <td colspan="2"></td>
       <td><%= link_to 'Show', plant_path(plant) %></td>
       <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
       <td><%= link_to 'Destroy', plant_path(plant),
@@ -18,4 +17,7 @@
   
     </tr>
   <% end %>
+    <% if @plants.size == 0 %>
+    <em> Brak wpisów </em>
+    <% end %>
 </table>

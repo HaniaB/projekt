@@ -5,6 +5,7 @@ class CathegoriesController < ApplicationController
   
   def show
     @cathegory = Cathegory.find(params[:id])
+    
   end
     
     def new

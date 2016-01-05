@@ -22,6 +22,20 @@
         <li><%= link_to "Kategorie",   cathegories_path %></li>
         <li><%= link_to "Help",   '#' %></li>
         <li><%= link_to "Log in", '#' %></li>
+        <li>
+        </ul>
+            
+          <ul class="nav navbar-nav navbar-right">  
+          <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+           
+            <%= form_tag(plants_path, :method => "get", class: "navbar-form", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Szukaj" %>
+        </div>
+        <button type="submit" class="btn btn-default">Szukaj</button>
+      </form>
+      <% end %>
+        </li>
       </ul>
     </nav>
 <%= link_to image_tag("meczennica_f3.jpg", id: "banner"), '#' %>

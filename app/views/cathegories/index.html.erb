@@ -9,12 +9,12 @@
    <% @cathegories.each do |cathegory| %>
     <tr>
       <td><%= cathegory.cat %></td>
-      <td colspan="2"></td>
       <td><%= link_to 'Pokaż', cathegory_path(cathegory) %></td>
-      <td colspan="2"></td>
-      <td><%= link_to 'Edytuj', edit_cathegory_path(cathegory) %></td>
-      <td colspan="2"></td>
-      <td><%= link_to 'Usuń', cathegory_path(cathegory)%></td>
+      <td colspan="2"></td><td><%= link_to 'Edytuj', edit_cathegory_path(cathegory) %></td>
+      <td colspan="2"></td> <td><%= link_to 'Usuń', cathegory_path(cathegory)%></td>
     </tr>
   <% end %>
+  <% if @cathegories.size == 0 %>
+    <em> Brak wpisów </em>
+    <% end %>
 </table>
